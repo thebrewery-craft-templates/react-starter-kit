@@ -6,27 +6,33 @@
  */
 
 import React from 'react';
+import CraftLogo from 'images/craft-logo.png';
 import {
+  StyledLayout,
   Background,
   BreweryTitleContainer,
   BreweryTitleWrapper,
   BreweryTitle,
   BrewerySubtitle,
+  CraftLogoImage,
+  StyledFooter,
 } from './styles';
-import BeerMug from '../../components/BeerMug';
-
 // Ant Design is pre installed , use included components for faster delivery
 
 export default function HomePage() {
   return (
-    <Background>
-      <BreweryTitleContainer>
-        <BeerMug />
-        <BreweryTitleWrapper>
-          <BreweryTitle> THE BREWERY </BreweryTitle>
-        </BreweryTitleWrapper>
-        <BrewerySubtitle> ReactJs boilerplate </BrewerySubtitle>
-      </BreweryTitleContainer>
-    </Background>
+    <StyledLayout>
+      <Background>
+        <BreweryTitleContainer>
+          <CraftLogoImage src={CraftLogo} alt="craft logo" />
+          <BrewerySubtitle> React Boilerplate </BrewerySubtitle>
+          powered by:
+          <BreweryTitleWrapper>
+            <BreweryTitle> THE BREWERY </BreweryTitle>
+          </BreweryTitleWrapper>
+        </BreweryTitleContainer>
+      </Background>
+      <StyledFooter>Craft © 2019 Created by Stratpoint</StyledFooter>
+    </StyledLayout>
   );
 }
