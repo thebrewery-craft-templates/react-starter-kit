@@ -6,13 +6,27 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import {
+  Background,
+  BreweryTitleContainer,
+  BreweryTitleWrapper,
+  BreweryTitle,
+  BrewerySubtitle,
+} from './styles';
+import BeerMug from '../../components/BeerMug';
+
+// Ant Design is pre installed , use included components for faster delivery
 
 export default function HomePage() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <Background>
+      <BreweryTitleContainer>
+        <BeerMug />
+        <BreweryTitleWrapper>
+          <BreweryTitle> THE BREWERY </BreweryTitle>
+        </BreweryTitleWrapper>
+        <BrewerySubtitle> ReactJs boilerplate </BrewerySubtitle>
+      </BreweryTitleContainer>
+    </Background>
   );
 }
