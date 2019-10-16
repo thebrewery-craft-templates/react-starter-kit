@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import CraftLogo from 'images/craft-logo.png';
+import MaltLogo from 'images/malt.png';
 import {
   StyledLayout,
   Background,
@@ -24,7 +24,7 @@ export default function HomePage() {
     <StyledLayout>
       <Background>
         <BreweryTitleContainer>
-          <CraftLogoImage src={CraftLogo} alt="craft logo" />
+          <CraftLogoImage src={MaltLogo} alt="craft logo" />
           <BrewerySubtitle> React Boilerplate </BrewerySubtitle>
           powered by:
           <BreweryTitleWrapper>
@@ -32,7 +32,7 @@ export default function HomePage() {
           </BreweryTitleWrapper>
         </BreweryTitleContainer>
       </Background>
-      <StyledFooter>Craft © 2019 Created by Stratpoint</StyledFooter>
+      <StyledFooter>Malt © 2019 Created by Stratpoint</StyledFooter>
     </StyledLayout>
   );
 }
