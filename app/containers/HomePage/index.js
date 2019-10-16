@@ -7,32 +7,37 @@
 
 import React from 'react';
 import MaltLogo from 'images/malt.png';
+import RBLogo from 'images/rb-logo.png';
 import {
   StyledLayout,
-  Background,
-  BreweryTitleContainer,
-  BreweryTitleWrapper,
-  BreweryTitle,
-  BrewerySubtitle,
-  CraftLogoImage,
-  StyledFooter,
+  CenterDiv,
+  Content,
+  Links,
+  ResponsiveImg,
+  RBLogoImage,
+  RBLogoWrapper,
 } from './styles';
 // Ant Design is pre installed , use included components for faster delivery
 
 export default function HomePage() {
   return (
     <StyledLayout>
-      <Background>
-        <BreweryTitleContainer>
-          <CraftLogoImage src={MaltLogo} alt="craft logo" />
-          <BrewerySubtitle> React Boilerplate </BrewerySubtitle>
-          powered by:
-          <BreweryTitleWrapper>
-            <BreweryTitle> THE BREWERY </BreweryTitle>
-          </BreweryTitleWrapper>
-        </BreweryTitleContainer>
-      </Background>
-      <StyledFooter>Malt © 2019 Created by Stratpoint</StyledFooter>
+      <CenterDiv>
+        <Content>
+          <ResponsiveImg src={MaltLogo} />
+          <Links>
+            <a href="http://stratpoint.com/">Documentation</a>
+            <a href="http://stratpoint.com/">GitLab</a>
+            <a href="http://stratpoint.com/">Tutorials</a>
+            <a href="http://stratpoint.com/">Get Started</a>
+            <a href="http://stratpoint.com/">Lezgo!</a>
+          </Links>
+          <RBLogoWrapper>
+            <p>powered by:</p>
+            <RBLogoImage src={RBLogo} />
+          </RBLogoWrapper>
+        </Content>
+      </CenterDiv>
     </StyledLayout>
   );
 }
