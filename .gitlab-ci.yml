@@ -5,7 +5,7 @@ stages:
 
 .deploy: &deploy
   before_script:
-    - oc login "$OPENSHIFT_SERVER" --token="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
+    - oc login "$OPENSHIFT_SERVER" -u="$OPENSHIFT_USER" -p="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
     - oc project "$OPENSHIFT_NAMESPACE"
   script:
     - "oc get services $APP 2> /dev/null || oc new-app . --name=$APP --strategy=docker -l app=$APP 2> /dev/null"
