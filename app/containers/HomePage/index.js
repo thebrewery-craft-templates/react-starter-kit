@@ -26,11 +26,7 @@ export default function HomePage() {
         <Content>
           <ResponsiveImg src={MaltLogo} />
           <Links>
-            <a href="http://stratpoint.com/">Documentation</a>
-            <a href="http://stratpoint.com/">GitLab</a>
-            <a href="http://stratpoint.com/">Tutorials</a>
-            <a href="http://stratpoint.com/">Get Started</a>
-            <a href="http://stratpoint.com/">Lezgo!</a>
+            <a href="https://docs.thebrewery.dev/maltjs/quickstart">Documentation</a>
           </Links>
           <RBLogoWrapper>
             <p>powered by:</p>
