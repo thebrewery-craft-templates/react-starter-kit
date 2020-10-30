@@ -29,11 +29,13 @@ ENV NPM_CONFIG_LOGLEVEL warn
 # To handle 'not get uid/gid'
 RUN npm config set unsafe-perm true
 
-# Copy all static build files into the image.
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY --from=base /src/build /usr/src/app
+# Install 'serve' package globally
 RUN npm install -g serve
+
+# Copy all static build files into the image.
+RUN mkdir -p /opt/app-root/src
+WORKDIR /opt/app-root/src
+COPY --from=base /src/build /opt/app-root/src
 
 # Set the command to start the node server.
 CMD serve -s .
