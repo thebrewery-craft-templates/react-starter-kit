@@ -26,7 +26,7 @@ export default function HomePage() {
         <Content>
           <ResponsiveImg src={MaltLogo} />
           <Links>
-            <a href="https://docs.thebrewery.dev/maltjs/quickstart">Documentation</a>
+            <a href="https://docs.thebrewery.app/maltjs/quickstart">Documentation</a>
           </Links>
           <RBLogoWrapper>
             <p>powered by:</p>
