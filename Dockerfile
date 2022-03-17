@@ -41,4 +41,4 @@ COPY --from=base /src/build /opt/app-root/src
 CMD serve -s .
 
 # Tell Docker about the port we'll run on.
-EXPOSE 5000
+EXPOSE 3000
